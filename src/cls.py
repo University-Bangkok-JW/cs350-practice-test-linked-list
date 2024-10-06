@@ -28,6 +28,18 @@ class SLinkedList:
             cur = cur.nextNode
         cur.nextNode = newNode
 
+    def appendNodeArr(self, data):
+        for i in data:
+            newNode = Node(i)
+            if self.headNode is None:
+                self.headNode = newNode
+            else:
+                cur = self.headNode
+                while cur.nextNode:
+                    cur = cur.nextNode
+                cur.nextNode = newNode
+        return newNode
+
     def addBtwNode(self, dataBefore, newData, dataAfter):
         cur = self.headNode
         while cur is not None:
