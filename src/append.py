@@ -15,7 +15,7 @@ list.predata(array)
 # Data to append to the linked list
 data = 6
 
-list.append(data)
+list.appendNode(data)
 
 # print the linked list
 list.printLinkedList()

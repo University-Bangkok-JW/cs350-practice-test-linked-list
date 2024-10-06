@@ -17,7 +17,7 @@ class SLinkedList:
                 cur.nextNode = newNode
                 cur = cur.nextNode
 
-    def append(self, data):
+    def appendNode(self, data):
         newNode = Node(data)
         if self.headNode is None:
             self.headNode = newNode
