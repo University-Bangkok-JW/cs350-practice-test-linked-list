@@ -31,7 +31,7 @@ class SLinkedList:
     def addBtwNode(self, dataBefore, newData, dataAfter):
         cur = self.headNode
         while cur is not None:
-            if cur.data == dataBefore and cur.nextNode and cur.nextNode.data == dataAfter:
+            if cur.data == dataBefore and cur.nextNode.data == dataAfter:
                 newNode = Node(newData)
                 newNode.nextNode = cur.nextNode
                 cur.nextNode = newNode
