@@ -10,14 +10,7 @@ list = SLinkedList()
 # Our array to be added to the linked list
 array = [1, 2, 3, 4, 6]
 
-for data in array:
-    newNode = Node(data)
-    if list.headNode is None:
-        list.headNode = newNode
-        cur = list.headNode
-    else:
-        cur.nextNode = newNode
-        cur = cur.nextNode
+list.predata(array)
 
 list.addBtwNode(4, 5, 6)
 
