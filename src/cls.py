@@ -7,6 +7,7 @@ class SLinkedList:
     def __init__(self):
         self.headNode = None
 
+    # Add data to the linked list
     def predata(self, array):
         for data in array:
             newNode = Node(data)
@@ -17,6 +18,7 @@ class SLinkedList:
                 cur.nextNode = newNode
                 cur = cur.nextNode
 
+    # Append data to the linked list
     def appendNode(self, data):
         newNode = Node(data)
         if self.headNode is None:
@@ -28,6 +30,7 @@ class SLinkedList:
             cur = cur.nextNode
         cur.nextNode = newNode
 
+    # Append multiple data to the linked list
     def appendNodeArr(self, data):
         for i in data:
             newNode = Node(i)
@@ -40,6 +43,7 @@ class SLinkedList:
                 cur.nextNode = newNode
         return newNode
 
+    # Add data between two nodes
     def addBtwNode(self, dataBefore, newData, dataAfter):
         cur = self.headNode
         while cur is not None:
@@ -51,11 +55,13 @@ class SLinkedList:
             cur = cur.nextNode
         print(f"Nodes with values {dataBefore} and {dataAfter} not found consecutively.")
 
+    # Make a new head node
     def makeNewHeadNode(self, newHeadNode):
         newNode = Node(newHeadNode)
         newNode.nextNode = self.headNode
         self.headNode = newNode
 
+    # Print the linked list
     def printLinkedList(self):
         cur = self.headNode
         while cur is not None:
