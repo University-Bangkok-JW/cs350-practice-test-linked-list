@@ -31,17 +31,10 @@ class SLinkedList:
         cur.next = newNode
 
     # Append multiple data to the linked list
+    # Reuse the appendNode method
     def appendNodeArr(self, data):
         for i in data:
-            newNode = Node(i)
-            if self.headNode is None:
-                self.headNode = newNode
-            else:
-                cur = self.headNode
-                while cur.next:
-                    cur = cur.next
-                cur.next = newNode
-        return newNode
+            self.appendNode(i)
 
     # Add data between two nodes
     def addBtwNode(self, dataBefore, newData, dataAfter):
