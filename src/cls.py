@@ -48,6 +48,24 @@ class SLinkedList:
             cur = cur.next
         print(f"Nodes with values {dataBefore} and {dataAfter} not found consecutively.")
 
+    def delNode(self, data):
+        cur = self.headNode
+
+        if cur is None:
+            print("List is empty.")
+            return
+
+        prev = None
+        while cur is not None and cur.data != data:
+            prev = cur
+            cur = cur.next
+
+        if cur is None:
+            print(f"Node with data {data} not found.")
+            return
+
+        prev.next = cur.next
+
     # Make a new head node
     def makeNewHeadNode(self, newHeadNode):
         newNode = Node(newHeadNode)
